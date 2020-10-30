@@ -7,5 +7,5 @@
   
 2. BFS
 
-TO DO:
+**TO DO:**
 - add iterators
