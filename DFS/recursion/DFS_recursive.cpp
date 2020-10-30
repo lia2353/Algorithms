@@ -52,22 +52,23 @@ void recDFS(vector<int> adj[], int start) {
 }
 
 int main() {
-    int V = 8;
+    int V = 12;
     vector<int> adj[V];
 
-    // Vertex numbers should be from 0 to 7
+    addEdge(adj, 0, 1);
+    addEdge(adj, 0, 2);
     addEdge(adj, 0, 3);
-    addEdge(adj, 0, 5);
-    addEdge(adj, 0, 7);
-    addEdge(adj, 1, 4);
-    addEdge(adj, 1, 6);
-    addEdge(adj, 2, 6);
-    addEdge(adj, 4, 7);
-    addEdge(adj, 5, 6);
+    addEdge(adj, 2, 4);
+    addEdge(adj, 3, 5);
+    addEdge(adj, 3, 6);
     addEdge(adj, 5, 7);
-    addEdge(adj, 6, 7);
+    addEdge(adj, 5, 8);
+    addEdge(adj, 5, 9);
+    addEdge(adj, 6, 9);
+    addEdge(adj, 6, 10);
+    addEdge(adj, 8, 10);
 
-    recDFS(adj, 1);
+    recDFS(adj, 0);
 
     return 0;
 }
