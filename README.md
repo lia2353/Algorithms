@@ -6,3 +6,6 @@
    - Iterative DFS (with stack)
   
 2. BFS
+
+TO DO:
+- add iterators
