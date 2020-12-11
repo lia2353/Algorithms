@@ -311,6 +311,7 @@ void TSP() {
     }
 
     printf("Generation 0 with best score: %f\n", bestPathScores[0]);
+    printf("Generation 10 with best score: %f\n", bestPathScores[10]);
     int generation = bestPathScores.size() / 4;
     printf("Generation %d with best score: %f\n", generation, bestPathScores[generation]);
     generation = bestPathScores.size() / 2;
