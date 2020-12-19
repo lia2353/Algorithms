@@ -1,32 +1,33 @@
-## Homework1: Sliding Blocks(N Puzzle)
+## Homework 1: Sliding Blocks(N Puzzle)
 
-•The gamestarts with a board consisting of blocks numbered 1 through N and one blank block represented by the number 0. 
-The goal is to arrange the tiles according to their numbers. Moving is done by moving the blocks on top, bottom, left and right in place of the empty block.<br>
-•At the input is given the number N -the number of blocks with numbers (8, 15, 24, etc.), the number I - the index of the position of zero (the empty block) 
-in the decision (using -1 the default zero index position is set at the bottom right) and then the layout of the board is introduced.
-<br>
+[The game](http://mypuzzle.org/sliding) starts with a board consisting of blocks numbered 1 through N and one blank block represented by the number 0. 
+The goal is to arrange the tiles according to their numbers. Moving is done by moving the blocks on top, bottom, left and right in place of the empty block.
 
-Using the A*(or IDA*) algorithm and the Manhattan distance heuristics (or Hemming distance), derive: <br>
-•In the first linae, the length of the "optimal" path from start to destination.<br>
-•The appropriate steps (in a new line for each one) that are taken to reach the final state. The steps are left, right, upand down <br>
-•Keep in mind that not every puzzle is solvable. You can check whether the puzzle is solvable here ( https://www.cs.princeton.edu/courses/archive/spring18/cos226/assignments/8puzzle/index.html ) or directly use valid examples.
+At the input is given: the number N - the count of blocks with numbers (8, 15, 24, etc.), the number I - the index of the position of zero (the empty block) in the decision (using -1 the default zero index position is set at the bottom right) and then the layout of the board is introduced.
 
-Sample input:<br>
-8<br>
--1<br>
-1 2 3<br>
-4 5 6<br>
-0 7 8<br>
+Using the **IDA*** algorithm and the **Manhattan distance heuristics** (or Hemming distance), derive:
+•In the first line, the length of the "optimal" path from start to destination.
+•The appropriate steps (new line for each one) that are taken to reach the final state. The steps are **left, right, upand down**.
+*Keep in mind that not every puzzle is solvable. You can check whether the puzzle is solvable [here](https://www.cs.princeton.edu/courses/archive/spring18/cos226/assignments/8puzzle/index.html) or directly use valid examples.
 
-Sample output:<br>
-2<br>
-left<br>
-left<br>
+Sample input:
+```
+8
+-1
+1 2 3
+4 5 6
+0 7 8
+````
 
-<br>
+Sample output:
+```
+2
+left
+left
+````
 
 
-## Homework2: N Queens
+## Homework 2: N Queens
 
 •Place N chess queens on an N×N chessboard so that no two queens threaten each other. In other words the solution requires that no two queens share the same row, column, or diagonal.<br>
 •Use the MinConflicts algorithm to solve the problem.<br>
@@ -65,7 +66,7 @@ solve(N) {
 }
 ```
 
-## Homework3: Traveling Salesman Problem
+## Homework 3: Traveling Salesman Problem
 Да се реши задачата за търговския пътник (Traveling Salesman Problem) чрез използване на генетичен алгоритъм.<br>
 
 За целта на програмата се задава: N - число (N <= 100) - брой точки в пространството (брой градове).<br>
@@ -77,7 +78,7 @@ solve(N) {
     2, 3, 4 - по избор<br>
     5. След последната генерация.<br>
 
-## Homework4: Tic-Tac-Toe
+## Homework 4: Tic-Tac-Toe
 Да се имплементира игра на морски шах срещу противник, като се използва алгоритъм **min-max** с **alpha-beta отсичане**.
 
 Започва се с празна дъска.
@@ -90,3 +91,31 @@ solve(N) {
 Изисквания:
 - Направете играта така, че да може да се задава дали компютърът или играчът е първи.  
 - Направете алгоритъма оптимален. 
+
+minimax: Pseudocode
+```
+function minimax(node, depth, isMaximizingPlayer, alpha, beta):
+
+    if node is a leaf node :
+        return value of the node
+    
+    if isMaximizingPlayer :
+        bestVal = -INFINITY 
+        for each child node :
+            value = minimax(node, depth+1, false, alpha, beta)
+            bestVal = max( bestVal, value) 
+            alpha = max( alpha, bestVal)
+            if beta <= alpha:
+                break
+        return bestVal
+
+    else :
+        bestVal = +INFINITY 
+        for each child node :
+            value = minimax(node, depth+1, true, alpha, beta)
+            bestVal = min( bestVal, value) 
+            beta = min( beta, bestVal)
+            if beta <= alpha:
+                break
+        return bestVal
+ ```
