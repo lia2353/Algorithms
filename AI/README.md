@@ -1,4 +1,4 @@
-<b>Homework: “Sliding Blocks(N Puzzle)”</b>
+## Homework1: Sliding Blocks(N Puzzle)
 
 •The gamestarts with a board consisting of blocks numbered 1 through N and one blank block represented by the number 0. 
 The goal is to arrange the tiles according to their numbers. Moving is done by moving the blocks on top, bottom, left and right in place of the empty block.<br>
@@ -26,7 +26,7 @@ left<br>
 <br>
 
 
-<b>Homework: N Queens</b><br>
+## Homework2: N Queens
 
 •Place N chess queens on an N×N chessboard so that no two queens threaten each other. In other words the solution requires that no two queens share the same row, column, or diagonal.<br>
 •Use the MinConflicts algorithm to solve the problem.<br>
@@ -65,7 +65,7 @@ solve(N) {
 }
 ```
 
-<b>Homework: Traveling Salesman Problem</b><br>
+## Homework3: Traveling Salesman Problem
 Да се реши задачата за търговския пътник (Traveling Salesman Problem) чрез използване на генетичен алгоритъм.<br>
 
 За целта на програмата се задава: N - число (N <= 100) - брой точки в пространството (брой градове).<br>
@@ -77,3 +77,16 @@ solve(N) {
     2, 3, 4 - по избор<br>
     5. След последната генерация.<br>
 
+## Homework4: Tic-Tac-Toe
+Да се имплементира игра на морски шах срещу противник, като се използва алгоритъм **min-max** с **alpha-beta отсичане**.
+
+Започва се с празна дъска.
+На всяка стъпка:
+- единият играч въвежда две числа ([1,3]) от клавиатура, които са неговия ход на дъската;  
+- използвайки алгоритъма,  намираме и нашия ход;
+- след това се показва конкретното състояние на играта.  
+Накрая се показва кой е спечелил играта.  
+  
+Изисквания:
+- Направете играта така, че да може да се задава дали компютърът или играчът е първи.  
+- Направете алгоритъма оптимален. 
