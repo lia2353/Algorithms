@@ -7,8 +7,8 @@ At the input is given: the number N - the count of blocks with numbers (8, 15, 2
 
 Using the **IDA*** algorithm and the **Manhattan distance heuristics** (or Hemming distance), derive:
 - In the first line, the length of the "optimal" path from start to destination.
-- The appropriate steps (new line for each one) that are taken to reach the final state. The steps are **left, right, upand down**.
-- Keep in mind that not every puzzle is solvable. You can check whether the puzzle is solvable [here](https://www.cs.princeton.edu/courses/archive/spring18/cos226/assignments/8puzzle/index.html) or directly use valid examples.
+- The appropriate steps (new line for each one) that are taken to reach the final state. The steps are **left, right, upand down**. <br>
+`*` Keep in mind that not every puzzle is solvable. You can check whether the puzzle is solvable [here](https://www.cs.princeton.edu/courses/archive/spring18/cos226/assignments/8puzzle/index.html) or directly use valid examples.
 
 Sample input:
 ```
@@ -32,20 +32,23 @@ left
 Place **N** chess queens on an N×N chessboard so that no two queens threaten each other. In other words the solution requires that no two queens share the same row, column, or diagonal.
 Use the **MinConflicts algorithm** to solve the problem.
 
-- **Input:** Integer N - the number of queens to be located.
+- **Input:** Integer N - the number of queens to be located.<br>
 `*` Requirement to work for N = 10,000.
 - **Output:** Print in the console the board by desigating a queen with * and an empty cell with _.
 
-Sample input:<br>
-4<br>
-
-Sample output:<br>
- `_ * _ _` <br>
- `_ _ _ *` <br>
- `* _ _ _` <br>
- `_ _ * _` <br>
+Sample input:
+````
+4
+````
+Sample output:
+````
+ _ * _ _
+ _ _ _ *
+ * _ _ _
+ _ _ * _
+````
  
-N Queens: Pseudocode<br>
+N Queens: Pseudocode
 ```
 solve(N) {
   // Putting the queen on the row with min conflicts
@@ -67,11 +70,10 @@ solve(N) {
 ```
 
 ## Homework 3: Traveling Salesman Problem
-Да се реши задачата за търговския пътник (Traveling Salesman Problem) чрез използване на генетичен алгоритъм.<br>
+Да се реши задачата за **търговския пътник** (Traveling Salesman Problem) чрез използване на **генетичен алгоритъм**.
 
-За целта на програмата се задава: N - число (N <= 100) - брой точки в пространството (брой градове).<br>
-
-Програмата генерира N точки от двумерна координатна система на случаен принцип.<br>
+За целта на програмата се задава: N - число (N <= 100) - брой точки в пространството (брой градове).
+Програмата генерира N точки от двумерна координатна система на случаен принцип.
 
 Търси се най-къс път, който да минава през всяка точка само по един път. За целта нека да се изведе на пет стъпки дължината на текущо най-добрия път в популацията.<br>
     1. на 10-та генерация<br>
@@ -79,7 +81,7 @@ solve(N) {
     5. След последната генерация.<br>
 
 ## Homework 4: Tic-Tac-Toe
-Да се имплементира игра на морски шах срещу противник, като се използва алгоритъм **min-max** с **alpha-beta отсичане**.
+Да се имплементира игра на **морски шах** срещу противник, като се използва алгоритъм **min-max** с **alpha-beta отсичане** (Minimax algorithm with alpa-beta pruning).
 
 Започва се с празна дъска.
 На всяка стъпка:
@@ -88,11 +90,11 @@ solve(N) {
 - след това се показва конкретното състояние на играта.  
 Накрая се показва кой е спечелил играта.  
   
-Изисквания:
-- Направете играта така, че да може да се задава дали компютърът или играчът е първи.  
-- Направете алгоритъма оптимален. 
+Requirements:
+- Must be able to choose who is the first player.
+- The algorithm must be optimal. (The fastest way to win => min depth)
 
-minimax: Pseudocode
+Minimax Pseudocode:
 ```
 function minimax(node, depth, isMaximizingPlayer, alpha, beta):
 
@@ -119,3 +121,22 @@ function minimax(node, depth, isMaximizingPlayer, alpha, beta):
                 break
         return bestVal
  ```
+ The algorithm is optimal. We can test it with this board:
+The current board is this and is Computer's turn:
+```
+O| |X|
+X| | |
+X|O|O|
+```
+If the algorithm doesn't consider the depth (i.e. is not optimal), next move will be
+```
+O|X|X|
+X| | |
+X|O|O|
+```
+If the algorithm is optimal (i.e. depth included), next move will be:
+```
+O| |X|
+X|X| |
+X|O|O|
+```
