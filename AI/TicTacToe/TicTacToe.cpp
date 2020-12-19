@@ -81,7 +81,7 @@ public:
 
 } gameBoard;
 
-// Minimax algorithm with Alpha–beta pruning
+// Minimax algorithm with Alphaâ€“beta pruning
 bool isTerminalState(const Board& board, int& boardState) {
     string mainDiagonal = board.getMainDiagonal();
     string secondaryDiagonal = board.getSecondaryDiagonal();
