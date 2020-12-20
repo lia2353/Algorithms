@@ -7,6 +7,9 @@
 
 using namespace std;
 
+#define QUEEN "* "
+#define EMPTY_SPACE "_ "
+
 class Board {
 
 public:
@@ -203,9 +206,9 @@ public:
         for(int row = 0; row < boardSize; ++row) {
             for(int col = 0; col < boardSize; ++col) {
                 if(queens[col] == row) {
-                    printf("* ");
+                    printf(QUEEN);
                 } else {
-                    printf("_ ");
+                    printf(EMPTY_SPACE);
                 }
             }
             printf("\n");
@@ -229,7 +232,8 @@ int main()
     chrono::duration<double> workTime = endTime - startTime;
     printf("Work time: %f seconds\n", workTime.count());
 
-    if(N <= 20) {
+    // Print only boards smaller than 20 rows/cols
+    if(N <= 20) { 
         board.print();
     }
     return 0;
