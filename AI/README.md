@@ -79,6 +79,18 @@ solve(N) {
     1. на 10-та генерация<br>
     2, 3, 4 - по избор<br>
     5. След последната генерация.<br>
+    
+Genetic Algorithm:
+```
+1. Initialize the population randomly.
+2. Determine the fitness of the chromosome.
+3. Until done repeat:
+    1. Select parents.
+    2. Perform crossover and mutation.
+    3. Calculate the fitness of the new population.
+    4. Append it to the gene pool.
+```
+In my implemetantion, I have 1000 **individuals** in each generation, keep 100 **elite individuals**, mate 500 **parents** to create 900 **children**, use a 0.1 **mutation rate** for a given gene, and run through 1000 **generations**.
 
 ## Homework 4: Tic-Tac-Toe
 Да се имплементира игра на **морски шах** срещу противник, като се използва алгоритъм **min-max** с **alpha-beta отсичане** (Minimax algorithm with alpa-beta pruning).
