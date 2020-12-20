@@ -29,7 +29,7 @@ public:
     void initEmptyBoard() {
         for(int row = 0; row < BOARD_SIZE; ++row) {
             for(int col = 0; col < BOARD_SIZE; ++col) {
-               //board[row][col] = EMPTY_SPACE;
+               board[row][col] = EMPTY_SPACE;
             }
         }
     }
