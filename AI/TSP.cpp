@@ -54,7 +54,7 @@ void printChromosome(Chromosome c) {
     printf("\n");
 }
 
-//calculates path distance (score of chromosome)
+// Calculates path distance (score of chromosome)
 double fitness(const Chromosome& chromosome) {
     double score = 0;
     for(int i = 0; i < N - 1; ++i) {
@@ -275,7 +275,7 @@ void geneticAlgorithm() {
     sort(population.begin(), population.end());
 }
 
-//Traveling Salesman Problem
+// Traveling Salesman Problem
 void TSP() {
     vector<double> bestPathScores;
     bestPathScores.reserve(MAX_GENERATIONS);
