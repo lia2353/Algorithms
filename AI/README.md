@@ -94,7 +94,7 @@ Requirements:
 - Must be able to choose who is the first player.
 - The algorithm must be optimal. (The fastest way to win => min depth)
 
-Minimax Pseudocode:
+Minimax: Pseudocode
 ```
 function minimax(node, depth, isMaximizingPlayer, alpha, beta):
 
