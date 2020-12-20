@@ -130,7 +130,7 @@ void getChildren(const Board& board, const int& player, vector<Board>& children)
 int minimax(const Board& board, bool isMaxPlayerTurn, int alpha, int beta, int &depth) {
     // If board is a terminal state (leaf node)
     int boardState;
-    if (isTerminalState(board, boardState)) {
+    if(isTerminalState(board, boardState)) {
         return boardState;
     }
 
@@ -142,10 +142,10 @@ int minimax(const Board& board, bool isMaxPlayerTurn, int alpha, int beta, int &
         children.reserve(BOARD_SIZE * BOARD_SIZE);
         getChildren(board, PLAYER_MAX, children);
 
-        for (auto child : children) {
+        for(auto child : children) {
             bestValue = max(bestValue, minimax(child, false, alpha,  beta,  depth));
             alpha = max(alpha, bestValue);
-            if (alpha >= beta) {
+            if(alpha >= beta) {
                 return bestValue;
             }
         }
@@ -158,10 +158,10 @@ int minimax(const Board& board, bool isMaxPlayerTurn, int alpha, int beta, int &
         children.reserve(BOARD_SIZE * BOARD_SIZE);
         getChildren(board, PLAYER_MIN, children);
 
-        for (auto child : children) {
+        for(auto child : children) {
             bestValue = min(bestValue, minimax(child, true, alpha, beta, depth));
             beta = min(beta, bestValue);
-            if (beta <= alpha) {
+            if(beta <= alpha) {
                 return bestValue;
             }
         }
@@ -178,7 +178,7 @@ void makeOptimalMove(Board& board) {
     children.reserve(BOARD_SIZE * BOARD_SIZE);
     getChildren(gameBoard, PLAYER_MAX, children);
 
-    for (auto child : children) {
+    for(auto child : children) {
         int depth = 0;
         int value = minimax(child, false, INT_MIN, INT_MAX, depth);
 
@@ -206,8 +206,8 @@ public:
         scanf("%c", &c);
         firstPlayer = (c == 'y') ? HUMAN : COMPUTER;
 
-        //First player always plays with 'X' and second player always plays with 'O'
-        //MAX is the COMPUTER and MIN is the HUMAN
+        // First player always plays with 'X' and second player always plays with 'O'
+        // MAX is the COMPUTER and MIN is the HUMAN
         PLAYER_MAX = (firstPlayer == HUMAN) ? SECOND_PLAYER : FIRST_PLAYER;
         PLAYER_MIN = (firstPlayer == HUMAN) ? FIRST_PLAYER : SECOND_PLAYER;
         PLAYER_MAX_WIN_CONFIG = string() + PLAYER_MAX + PLAYER_MAX + PLAYER_MAX;
@@ -225,7 +225,7 @@ public:
             scanf("%d %d", &row, &col);
         }
 
-        //MIN is the HUMAN
+        // MIN is the HUMAN
         gameBoard.setValueTo(PLAYER_MIN, row - 1, col - 1);
     }
 
@@ -240,7 +240,7 @@ public:
     }
 
     void play() {
-        if (firstPlayer == HUMAN) {
+        if(firstPlayer == HUMAN) {
             printf("\nBoard: \n");
             gameBoard.print();
             humanMakeMove();
@@ -248,11 +248,11 @@ public:
         }
 
         int resultOfTheGame;
-        while ( !isTerminalState(gameBoard, resultOfTheGame)) {
+        while(!isTerminalState(gameBoard, resultOfTheGame)) {
             makeOptimalMove(gameBoard);
             printf("Computer: \n");
             gameBoard.print();
-            if (isTerminalState(gameBoard, resultOfTheGame)) {
+            if(isTerminalState(gameBoard, resultOfTheGame)) {
                     break;
             }
             humanMakeMove();
