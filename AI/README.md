@@ -1,4 +1,4 @@
-## Homework 1: Sliding Blocks(N Puzzle)
+## Homework 1: Sliding Blocks (N Puzzle)
 
 [The game](http://mypuzzle.org/sliding) starts with a board consisting of blocks numbered 1 through N and one blank block represented by the number 0. 
 The goal is to arrange the tiles according to their numbers. Moving is done by moving the blocks on top, bottom, left and right in place of the empty block.
