@@ -69,7 +69,7 @@ solve(N) {
 }
 ```
 
-## Homework 3: Traveling Salesman Problem
+## Homework 3: Traveling Salesman Problem (TSP)
 Да се реши задачата за **търговския пътник** (Traveling Salesman Problem) чрез използване на **генетичен алгоритъм**.
 
 За целта на програмата се задава: N - число (N <= 100) - брой точки в пространството (брой градове).
