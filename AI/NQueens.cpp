@@ -32,7 +32,7 @@ public:
         fill(queensOnRightDiagonal.begin(), queensOnRightDiagonal.end(), 0);
     }
 
-    /* Returns the index of left diagonal on witch the given cell belongs
+    /* Returns the index of left diagonal on which the given cell belongs
      * Diagonals' indexes: 0 to 2 * N - 1
      * Formula: (N - 1) - (y - x)
      *
