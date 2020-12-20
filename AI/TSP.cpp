@@ -23,8 +23,8 @@ struct City {
     }
 };
 
-using Chromosome = vector<int>; //path representation - permutation of cities (encoded with numbers from 0 to N-1)
-using Population = vector<pair<double, Chromosome>>; //collection of chromosomes with their scores
+#define Chromosome vector<int>                       //path representation - permutation of cities (encoded with numbers from 0 to N-1)
+#define Population vector<pair<double, Chromosome>>1 //collection of chromosomes with their scores
 
 const int MAX_N = 100;
 const int MAX_GENERATIONS = 1000;
