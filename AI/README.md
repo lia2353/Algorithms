@@ -90,7 +90,7 @@ Genetic Algorithm:
     3. Calculate the fitness of the new population.
     4. Append it to the gene pool.
 ```
-In my implemetantion, I have 1000 **individuals** in each generation, keep 100 **elite individuals**, corssover 500 **parents** to create 900 **children**, use a 0.1 **mutation rate** for a given gene, and run through 1000 **generations**.
+In my implemetantion, I have 1000 **individuals** in each generation, keep 100 **elite individuals**, crossover 500 **parents** to create 900 **children**, use a 0.1 **mutation rate** for a given gene, and run through 1000 **generations**.
 
 ## Homework 4: Tic-Tac-Toe
 Да се имплементира игра на **морски шах** срещу противник, като се използва алгоритъм **min-max** с **alpha-beta отсичане** (Minimax algorithm with alpa-beta pruning).
