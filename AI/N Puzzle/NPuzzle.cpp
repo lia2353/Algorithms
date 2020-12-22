@@ -241,7 +241,7 @@ int LDFS(int moves, const int& threshold) {
         if(visited.find(node->toString()) == visited.end()) {
             path.push(make_pair(node, neighbour.second));
 
-            result = LDFS(moves+1, threshold);
+            result = LDFS(moves + 1, threshold);
             visited.erase(node->toString());
 
             if(result == FOUND) {
@@ -249,7 +249,7 @@ int LDFS(int moves, const int& threshold) {
                 return FOUND;
             }
 
-            cost = moves + 1 + node->getManhattanDist();
+            //cost = moves + 1 + node->getManhattanDist();
             if(result < minThreshold) {minThreshold = result;}
             path.pop();
         }
