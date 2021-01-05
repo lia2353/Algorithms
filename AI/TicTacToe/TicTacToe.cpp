@@ -193,6 +193,75 @@ void makeOptimalMove(Board& board) {
     }
 }
 
+/*
+//Reverse logic: Play worst possible move
+int minimax(const Board& board, bool isMaxPlayerTurn, int alpha, int beta, int &depth) {
+    // If board is a terminal state (leaf node)
+    int boardState;
+    if(isTerminalState(board, boardState)) {
+        return boardState;
+    }
+
+    ++depth;
+
+    if(isMaxPlayerTurn) {
+        int bestValue = INT_MAX; //here
+        vector<Board> children;
+        children.reserve(BOARD_SIZE * BOARD_SIZE);
+        getChildren(board, PLAYER_MAX, children);
+
+        for(auto child : children) {
+            bestValue = min(bestValue, minimax(child, false, alpha,  beta,  depth));//here
+            alpha = min(alpha, bestValue); //here
+            if(alpha <= beta) {//here
+                return bestValue;
+            }
+        }
+        return bestValue;
+    }
+    //It's Min Player turn
+    else {
+        int bestValue = INT_MIN;//here
+        vector<Board> children;
+        children.reserve(BOARD_SIZE * BOARD_SIZE);
+        getChildren(board, PLAYER_MIN, children);
+
+        for(auto child : children) {
+            bestValue = max(bestValue, minimax(child, true, alpha, beta, depth));//here
+            beta = max(beta, bestValue); //here
+            if(beta >= alpha) {
+                return bestValue;
+            }
+        }
+        return bestValue;
+    }
+}
+
+void makeOptimalMove(Board& board) {
+    int bestValue = WIN; //here
+    int bestDepth = INT_MAX;
+    Board bestBoard;
+
+    vector<Board> children;
+    children.reserve(BOARD_SIZE * BOARD_SIZE);
+    getChildren(gameBoard, PLAYER_MAX, children);
+
+    for(auto child : children) {
+        int depth = 0;
+        int value = minimax(child, false, INT_MIN, INT_MAX, depth);
+
+        if(value < bestValue) { //here
+            bestValue = value;
+            board = child;
+            bestDepth = depth;
+        } else if(value == bestValue && depth < bestDepth){
+            board = child;
+            bestDepth = depth;
+        }
+    }
+}
+*/
+
 class TicTacToe {
     bool firstPlayer;
 
