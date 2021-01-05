@@ -69,6 +69,8 @@ solve(N) {
 }
 ```
 
+**Additional:** reverseNQueens file -> returns board with queens aranged in max conflicts configuration
+
 ## Homework 3: Traveling Salesman Problem (TSP)
 Да се реши задачата за **търговския пътник** (Traveling Salesman Problem) чрез използване на **генетичен алгоритъм**.
 
@@ -152,3 +154,5 @@ O| |X|
 X|X| |
 X|O|O|
 ```
+
+**Additional:** reverse logic (commented code) -> The Computer plays worst move. In this case Computer and Human sre always DRAW.
