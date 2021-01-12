@@ -168,8 +168,8 @@ X|O|O|
 - Log probabilities - За да решим проблема с умножаването на вероятности, което води до числа като 0,00..002 например. Затова използваме свойството на логаритмите ln(a·b) = lna + lnb и получаваме удобни за сметки числа и запазват знака за сравнение. (Внимание: Понеже вероятностите са между 0 и 1, то логаритмите от тези вероятности ще бъдат винаги отрицателни числа)
 
 Пoлезни връзки:
-[ShatterLine Blog](http://shatterline.com/blog/2013/09/12/not-so-naive-classification-with-the-naive-bayes-classifier/)
-[GeeksforGeeks](https://www.geeksforgeeks.org/naive-bayes-classifiers/)
-[K-fold Cross-Validation](https://towardsdatascience.com/the-importance-of-k-fold-cross-validation-for-model-prediction-in-machine-learning-4709d3fed2ef)
-[Laplace Smoothing](https://towardsdatascience.com/introduction-to-na%C3%AFve-bayes-classifier-fa59e3e24aaf)
-[Log-probabilities](http://www.cs.rhodes.edu/~kirlinp/courses/ai/f18/projects/proj3/naive-bayes-log-probs.pdf)
+- [ShatterLine Blog](http://shatterline.com/blog/2013/09/12/not-so-naive-classification-with-the-naive-bayes-classifier/)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/naive-bayes-classifiers/)
+- [K-fold Cross-Validation](https://towardsdatascience.com/the-importance-of-k-fold-cross-validation-for-model-prediction-in-machine-learning-4709d3fed2ef)
+- [Laplace Smoothing](https://towardsdatascience.com/introduction-to-na%C3%AFve-bayes-classifier-fa59e3e24aaf)
+- [Log-probabilities](http://www.cs.rhodes.edu/~kirlinp/courses/ai/f18/projects/proj3/naive-bayes-log-probs.pdf)
